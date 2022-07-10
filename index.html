@@ -13,7 +13,7 @@
   </head>
 
   <body>
-<button onclick="action('conp',5)">Goood</button>
+<button onclick="action(5 , 'conp',5)">Goood</button>
 <script> 
   
   var reputation= 100 ;
@@ -23,18 +23,23 @@
   var hostile = 10 ; 
 var conp = 1 ;
   var better = 1 ;
+  var money = 50
   setInterval(month , 2000) ;
   function p(num, percentage){ return num * (percentage / 100);}
   function month() { 
-
-  muslims=   muslims + p(non , conp) ; }
+money = money + 3 ;
+  muslims=   muslims + p(non , conp) ;
+  }
   function conversion(val , more) {
 if (val === "conp" ) {
     conp = conp + more ; } 
     alert(muslims)
     }
-  function action(va1 , mo1) {
+  function action(dm , va1 , mo1) {
+    money = money - dm ;
+      
     conversion(va1 , mo1)
+    alert(money) 
     } 
     
   
