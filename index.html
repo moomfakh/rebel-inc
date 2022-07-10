@@ -13,7 +13,7 @@
   </head>
 
   <body>
-<button onclick="conversion(conp,5)">Goood</button>
+<button onclick="conversion('conp',5)">Goood</button>
 <script> 
   
   var reputation= 100 ;
@@ -29,13 +29,13 @@ var conp = 1 ;
 
   muslims=   muslims + p(non , conp) ; }
   function conversion(val , more) {
-
-    val.value = val + more ;
-    alert(conp)
+if (val === "conp" ) {
+    conp = conp + more ; } 
+    alert(muslims)
     }
   function action() {
     
-    }
+    } 
     
   
   </script>
