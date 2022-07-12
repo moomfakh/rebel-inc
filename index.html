@@ -15,7 +15,8 @@
   <body>
 <button onclick="action(5 , 'conp',5)">Goood</button>
     <button onclick="action(1 , 'conp',-5)">Baaad, Veryy Baaad</button>
-    
+    <p>Money: <span id="money"></span><br> Muslims : <span id="muslims"></span><br>
+   Non Muslims <span id="non"></span></p>
 <script> 
   
   var reputation= 100 ;
@@ -25,7 +26,10 @@
   var hostile = 10 ; 
 var conp = 1 ;
   var better = 1 ;
-  var money = 50
+  var money = 50 ;
+  var muslimd = document.getElementById("muslims") ;
+  var nond = document.getElementById("non") ;
+  var moneyd = document.getElementById("money") ;
   setInterval(month , 2000) ;
   function p(num, percentage){ return num * (percentage / 100);}
   function month() { 
@@ -33,7 +37,9 @@ money = money + 3 ;
   conp=  conp - 0.5 ;
   muslims=   Math.round(muslims + p(non , conp)) ;
     non = Math.round(non - p(non , conp)) ;
-    alert(muslims) ;
+  muslimd.innerHTML = muslims ;
+    nond.innerHTML = non ;
+    moneyd.innerHTML = money ;
   }
   function conversion(val , more) {
 if (val === "conp" ) {
