@@ -13,7 +13,7 @@
   </head>
 
   <body>
-<button onclick="action(5 , 0 ,'conp',5)">Goood</button>
+<button onclick="action(5 , 0 ,'conp',1)">Goood</button>
     <button onclick="action(1 ,5 , 'conp',-5)">Baaad, Veryy Baaad</button>
     <p>Money: <span id="money"></span><br> Muslims : <span id="muslims"></span><br>
      Non Muslims <span id="non"></span><br>Reputation: <span id="rep"></span></p>
@@ -21,7 +21,6 @@
   
   var rep= 100 ;
   var muslims = 90 ;
-  var pmuslims = 10 ;
   var non = 190 ;
   var hostile = 10 ; 
 var conp = 1 ;
@@ -36,6 +35,7 @@ var conp = 1 ;
 money = money + 3 ;
   muslims=   Math.round(muslims + conp) ;
     non = Math.round(non - conp) ;
+    hostile = Math.round(hostile - conp/2)
   muslimd.innerHTML = muslims ;
     nond.innerHTML = non ;
     moneyd.innerHTML = money ;
